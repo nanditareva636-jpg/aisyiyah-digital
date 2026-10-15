@@ -1,0 +1,510 @@
+<?php
+/**
+ * Website: Aisyiyah Jawa Tengah
+ * Halaman: Beranda (index.php)
+ */
+
+include_once 'config/database.php';
+$page_title = "Aisyiyah Jawa Tengah - Menjaga Sejarah, Mencerahkan Bangsa";
+include 'includes/header.php';
+include 'includes/navbar.php';
+?>
+
+<!-- ================= 1. HERO SECTION ================= -->
+<section class="hero-section">
+    <div class="hero-pattern"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <div class="hero-badge mb-3">
+                    <i class="bi bi-patch-check-fill text-warning"></i>
+                    <span>Portal Resmi Sejarah & Pustaka Digital</span>
+                </div>
+                <h1 class="hero-title mb-3">
+                    Menjaga Sejarah, Menggerakkan Perempuan, Mencerahkan Bangsa
+                </h1>
+                <p class="hero-tagline mb-4">
+                    Dokumentasi digital perjalanan peradaban, pemikiran tokoh pejuang, khazanah pustaka, serta gerakan sosial dakwah Pimpinan Wilayah Aisyiyah Jawa Tengah dari masa ke masa.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="sejarah.php" class="btn btn-gold d-inline-flex align-items-center gap-2">
+                        <span>Jelajahi Sejarah</span>
+                        <i class="bi bi-compass"></i>
+                    </a>
+                    <a href="pustaka.php" class="btn btn-outline-light-custom d-inline-flex align-items-center gap-2">
+                        <span>Pustaka Digital</span>
+                        <i class="bi bi-journal-bookmark-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-card">
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="navbar-brand-logo bg-white p-1" style="width: 55px; height: 55px;">
+                            <img src="assets/img/logo-aisyiyah.svg" alt="Logo Aisyiyah" style="width: 100%; height: 100%; object-fit: contain;">
+                        </div>
+                        <div>
+                            <h5 class="text-white mb-0">PWA Jawa Tengah</h5>
+                            <small class="text-warning fw-semibold">Gerakan Perempuan Berkemajuan</small>
+                        </div>
+                    </div>
+                    <p class="text-white-50 small mb-4" style="line-height: 1.7;">
+                        "Perempuan berkemajuan adalah perempuan yang memiliki alam pikiran dan kondisi kehidupan yang maju dalam segala aspek tanpa meninggalkan nilai-nilai keluhuran Islam."
+                    </p>
+                    <div class="border-top border-white border-opacity-10 pt-3 d-flex justify-content-between text-center">
+                        <div>
+                            <div class="fs-4 fw-bold text-white">1917</div>
+                            <small class="text-white-50" style="font-size: 0.75rem;">Lahir di Indonesia</small>
+                        </div>
+                        <div class="border-start border-white border-opacity-10 ps-3">
+                            <div class="fs-4 fw-bold text-warning">1923</div>
+                            <small class="text-white-50" style="font-size: 0.75rem;">Rintisan di Jateng</small>
+                        </div>
+                        <div class="border-start border-white border-opacity-10 ps-3">
+                            <div class="fs-4 fw-bold text-white">35</div>
+                            <small class="text-white-50" style="font-size: 0.75rem;">Kabupaten/Kota</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 3. TENTANG SINGKAT ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <div class="position-relative p-4 rounded-4" style="background: #ffffff; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="p-3 rounded-circle text-white" style="background-color: var(--primary-green);">
+                            <i class="bi bi-book-half fs-4"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-0">Mengenal Aisyiyah</h4>
+                            <small class="text-muted">Organisasi Otonom Muhammadiyah</small>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-3">
+                        Aisyiyah adalah organisasi perempuan persyarikatan Muhammadiyah yang berdiri sejak tahun 1917 M (1335 H). Di Jawa Tengah, Aisyiyah tumbuh menjadi pilar utama pemberdayaan perempuan dalam bidang pendidikan anak, kesehatan ibu dan anak, kemandirian ekonomi, serta hukum dan hak asasi.
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex align-items-center gap-2 mb-2 text-dark">
+                            <i class="bi bi-check-circle-fill text-success"></i> Pelopor pendidikan anak usia dini (TK ABA pertama di Indonesia).
+                        </li>
+                        <li class="d-flex align-items-center gap-2 mb-2 text-dark">
+                            <i class="bi bi-check-circle-fill text-success"></i> Penggerak layanan kesehatan sosial dan pencegahan stunting.
+                        </li>
+                        <li class="d-flex align-items-center gap-2 text-dark">
+                            <i class="bi bi-check-circle-fill text-success"></i> Pendampingan ekonomi keluarga dan UMKM muslimah berkemajuan.
+                        </li>
+                    </ul>
+                    <a href="tentang.php" class="btn btn-green btn-sm px-4 py-2">
+                        Selengkapnya Tentang Kami <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <span class="section-subtitle text-start">Garis Waktu Perjuangan</span>
+                <h2 class="mb-3" style="color: var(--primary-green); font-size: 2.2rem;">Jejak Sejarah Emas Aisyiyah di Tanah Jawa Tengah</h2>
+                <p class="text-secondary mb-4">
+                    Menyusuri rekam jejak perjuangan para tokoh perempuan muslimah sejak masa perintisan awal abad ke-20 hingga era modern saat ini.
+                </p>
+                <div class="d-flex gap-3">
+                    <div class="border-start border-3 border-warning ps-3">
+                        <h6 class="fw-bold mb-1">Rintisan Sejarah 1923</h6>
+                        <small class="text-muted">Mulai berdirinya cabang-cabang perintis di Surakarta, Pekalongan, dan Banyumas.</small>
+                    </div>
+                    <div class="border-start border-3 border-success ps-3">
+                        <h6 class="fw-bold mb-1">Kongres Akbar 1929</h6>
+                        <small class="text-muted">Jawa Tengah menjadi panggung bersejarah kongres pemantapan peran perempuan.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 4. TIMELINE SINGKAT ================= -->
+<section class="py-5" style="background-color: #f6f3eb;">
+    <div class="container">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">Lini Masa Bersejarah</span>
+            <h2 class="section-title">Tonggak Peristiwa Penting</h2>
+        </div>
+
+        <div class="timeline-track">
+            <!-- Timeline 1 -->
+            <div class="row g-0 timeline-item align-items-center">
+                <div class="col-md-5 text-md-end pe-md-4">
+                    <span class="timeline-year">Tahun 1914</span>
+                    <h5 class="fw-bold mb-1">Kelahiran Perkumpulan Sapa Tresno</h5>
+                    <p class="text-muted small mb-0">Cikal bakal gerakan perempuan yang diprakarsai oleh Nyai Ahmad Dahlan bersama gadis-gadis terpelajar di Kauman.</p>
+                </div>
+                <div class="col-md-2 d-none d-md-block text-center position-relative">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="col-md-5 ps-md-4">
+                    <div class="timeline-content">
+                        <small class="text-success fw-bold"><i class="bi bi-bookmark-fill me-1"></i> Rintisan Awal</small>
+                        <p class="small text-secondary mt-1 mb-0">Pondasi dasar pendidikan budi pekerti dan membaca Al-Qur'an bagi kaum ibu dan remaja putri.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline 2 -->
+            <div class="row g-0 timeline-item align-items-center">
+                <div class="col-md-5 text-md-end pe-md-4 order-md-1 order-2">
+                    <div class="timeline-content">
+                        <small class="text-warning fw-bold"><i class="bi bi-star-fill me-1"></i> Deklarasi Bersejarah</small>
+                        <p class="small text-secondary mt-1 mb-0">Peresmian nama Aisyiyah yang dinisbatkan kepada Siti Aisyah r.a., istri tercinta Rasulullah SAW.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 d-none d-md-block text-center position-relative order-md-2">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="col-md-5 ps-md-4 order-md-3 order-1 mb-2 mb-md-0">
+                    <span class="timeline-year">27 Rajab 1335 H / 1917 M</span>
+                    <h5 class="fw-bold mb-1">Peresmian Nama Aisyiyah</h5>
+                    <p class="text-muted small mb-0">Secara resmi diperkenalkan ke publik dan mulai menjalankan program sistematis.</p>
+                </div>
+            </div>
+
+            <!-- Timeline 3 -->
+            <div class="row g-0 timeline-item align-items-center">
+                <div class="col-md-5 text-md-end pe-md-4">
+                    <span class="timeline-year">Tahun 1923</span>
+                    <h5 class="fw-bold mb-1">Rintisan Cabang Pertama di Jawa Tengah</h5>
+                    <p class="text-muted small mb-0">Melebarkan sayap dakwah ke Surakarta, Kudus, Pekalongan, dan menyebar ke seluruh karesidenan Jawa Tengah.</p>
+                </div>
+                <div class="col-md-2 d-none d-md-block text-center position-relative">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="col-md-5 ps-md-4">
+                    <div class="timeline-content">
+                        <small class="text-primary fw-bold"><i class="bi bi-flag-fill me-1"></i> Ekspansi Wilayah</small>
+                        <p class="small text-secondary mt-1 mb-0">Kader-kader putri di Jawa Tengah mulai mendirikan pengajian berkala dan sekolah kader putri.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline 4 -->
+            <div class="row g-0 timeline-item align-items-center">
+                <div class="col-md-5 text-md-end pe-md-4 order-md-1 order-2">
+                    <div class="timeline-content">
+                        <small class="text-success fw-bold"><i class="bi bi-cpu-fill me-1"></i> Abad Kedua</small>
+                        <p class="small text-secondary mt-1 mb-0">Memperkuat jejaring ribuan ranting, layanan digitalisasi pustaka, dan kemandirian institusi perempuan.</p>
+                    </div>
+                </div>
+                <div class="col-md-2 d-none d-md-block text-center position-relative order-md-2">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="col-md-5 ps-md-4 order-md-3 order-1 mb-2 mb-md-0">
+                    <span class="timeline-year">Masa Kini</span>
+                    <h5 class="fw-bold mb-1">Transformasi Digital & Kemajuan</h5>
+                    <p class="text-muted small mb-0">Aisyiyah Jawa Tengah hadir sebagai pelopor gerakan perempuan modern yang berdaya saing global.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="timeline.php" class="btn btn-outline-gold d-inline-flex align-items-center gap-2">
+                <span>Lihat Seluruh Lini Masa Sejarah</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 5. TOKOH PILIHAN ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">Figur Teladan</span>
+            <h2 class="section-title">Tokoh Pejuang Aisyiyah</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Tokoh 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-tokoh">
+                    <div class="tokoh-img-wrap">
+                        <img src="assets/uploads/tokoh/1790690717_6abbc59d15386.jpg" alt="Nyai Hj. Ahmad Dahlan" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="tokoh-badge">Pahlawan Nasional</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-bold mb-1">Nyai Hj. Ahmad Dahlan</h5>
+                        <p class="text-muted small mb-3">Siti Walidah (1872 - 1946)</p>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Pendiri gerakan Aisyiyah, pelopor pemberdayaan kaum wanita muslimah melalui pendidikan asrama putri, pengajian buruh pabrik, dan dapur umum perjuangan kemerdekaan.
+                        </p>
+                        <a href="detail-tokoh.php?id=1" class="btn btn-outline-gold btn-sm w-100 py-2">
+                            Lihat Profil Lengkap <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tokoh 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-tokoh">
+                    <div class="tokoh-img-wrap">
+                        <img src="assets/uploads/tokoh/1790690754_6abbc5c291b91.png" alt="Hj. Siti Hayinah Mawardi" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="tokoh-badge">Orator Kongres 1928</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-bold mb-1">Hj. Siti Hayinah Mawardi</h5>
+                        <p class="text-muted small mb-3">Tokoh Penggerak & Pendidik (1906 - 1996)</p>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Orator termuda utusan Aisyiyah pada Kongres Perempuan Indonesia Pertama tahun 1928. Aktif membina cabang dan perkaderan kepemimpinan Aisyiyah di tanah Jawa Tengah.
+                        </p>
+                        <a href="detail-tokoh.php?id=2" class="btn btn-outline-gold btn-sm w-100 py-2">
+                            Lihat Profil Lengkap <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tokoh 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-tokoh">
+                    <div class="tokoh-img-wrap">
+                        <img src="assets/uploads/tokoh/1790690800_6abbc5f01b1e9.webp" alt="Nyai Hj. Siti Bariyah" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="tokoh-badge">Ketua Pertama Aisyiyah</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <h5 class="fw-bold mb-1">Nyai Hj. Siti Bariyah</h5>
+                        <p class="text-muted small mb-3">Ketua Pertama (1917 - 1920-an)</p>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Sosok wanita cerdas lulusan sekolah netral yang fasih berbahasa Belanda dan Arab. Pemimpin pertama yang meletakkan dasar administrasi dan kepemimpinan modern di tubuh Aisyiyah.
+                        </p>
+                        <a href="detail-tokoh.php?id=3" class="btn btn-outline-gold btn-sm w-100 py-2">
+                            Lihat Profil Lengkap <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="tokoh.php" class="btn btn-green px-4 py-2">
+                Jelajahi Direktori Tokoh Lainnya <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 6. ARTIKEL TERBARU ================= -->
+<section class="py-5" style="background-color: #f7f5ed;">
+    <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+            <div>
+                <span class="section-subtitle text-start">Kabar & Publikasi</span>
+                <h2 class="mb-0" style="color: var(--primary-green);">Artikel & Berita Terkini</h2>
+            </div>
+            <a href="artikel.php" class="btn btn-outline-gold btn-sm mt-3 mt-md-0 d-inline-flex align-items-center gap-2">
+                <span>Semua Artikel</span>
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+            <!-- Artikel 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-artikel">
+                    <div class="artikel-img position-relative overflow-hidden">
+                        <img src="assets/uploads/artikel/musywil-jateng.jpg" alt="Musyawarah Pimpinan Wilayah Aisyiyah Jateng" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="artikel-category">Berita PWA</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="text-muted small mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-calendar3"></i> 28 September 2026
+                            <span>•</span>
+                            <i class="bi bi-eye"></i> 142 kali
+                        </div>
+                        <h5 class="fw-bold mb-2">
+                            <a href="detail-artikel.php?id=1" class="text-dark">Musyawarah Pimpinan Wilayah Aisyiyah Jateng Teguhkan Dakwah Berkemajuan</a>
+                        </h5>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Pimpinan Wilayah Aisyiyah Jawa Tengah menggelar agenda strategis dalam memperkuat konsolidasi kelembagaan di 35 kabupaten/kota...
+                        </p>
+                        <a href="detail-artikel.php?id=1" class="fw-bold text-success small d-inline-flex align-items-center gap-1">
+                            Baca Selengkapnya <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artikel 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-artikel">
+                    <div class="artikel-img position-relative overflow-hidden">
+                        <img src="assets/uploads/artikel/artikel_1791295681_6ac500c123a54.jpg" alt="Peran PAUD & TK ABA di Jawa Tengah" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="artikel-category">Pendidikan</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="text-muted small mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-calendar3"></i> 25 September 2026
+                            <span>•</span>
+                            <i class="bi bi-eye"></i> 98 kali
+                        </div>
+                        <h5 class="fw-bold mb-2">
+                            <a href="detail-artikel.php?id=2" class="text-dark">Peran PAUD & TK ABA di Jawa Tengah dalam Membentuk Karakter Mandiri Anak</a>
+                        </h5>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Taman Kanak-kanak Aisyiyah Bustanul Athfal (TK ABA) menjadi pondasi emas pendidikan generasi penerus bangsa yang berakhlak mulia...
+                        </p>
+                        <a href="detail-artikel.php?id=2" class="fw-bold text-success small d-inline-flex align-items-center gap-1">
+                            Baca Selengkapnya <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artikel 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card-artikel">
+                    <div class="artikel-img position-relative overflow-hidden">
+                        <img src="assets/uploads/artikel/posyandu-stunting.jpg" alt="Gerakan Serentak Cegah Stunting di Posyandu" class="w-100 h-100" style="object-fit: cover;">
+                        <span class="artikel-category">Kesehatan</span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="text-muted small mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-calendar3"></i> 20 September 2026
+                            <span>•</span>
+                            <i class="bi bi-eye"></i> 180 kali
+                        </div>
+                        <h5 class="fw-bold mb-2">
+                            <a href="detail-artikel.php?id=3" class="text-dark">Gerakan Serentak Cegah Stunting di Posyandu Binaan Aisyiyah Se-Jawa Tengah</a>
+                        </h5>
+                        <p class="small text-secondary mb-4 flex-grow-1">
+                            Majelis Kesehatan PWA Jateng menggalakkan edukasi gizi seimbang dan pemeriksaan tumbuh kembang balita secara intensif...
+                        </p>
+                        <a href="detail-artikel.php?id=3" class="fw-bold text-success small d-inline-flex align-items-center gap-1">
+                            Baca Selengkapnya <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 7. GALERI DOKUMENTASI ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="section-title-wrap">
+            <span class="section-subtitle">Dokumentasi Visual</span>
+            <h2 class="section-title">Galeri Kegiatan</h2>
+        </div>
+
+        <div class="row g-3">
+            <!-- Galeri 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-baksos-lansia.jpg" alt="Pemeriksaan Kesehatan Gratis Warga Lansia" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Bakti Sosial</span>
+                        <h6 class="mb-0 fw-bold">Pemeriksaan Kesehatan Gratis Warga Lansia</h6>
+                        <small class="text-white-50">Semarang, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-bazar-umkm.jpg" alt="Bazar & Pameran UMKM Muslimah Berkemajuan" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Pemberdayaan</span>
+                        <h6 class="mb-0 fw-bold">Bazar & Pameran UMKM Muslimah Berkemajuan</h6>
+                        <small class="text-white-50">Surakarta, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-pentas-tkaba.jpg" alt="Pentas Kreativitas Siswa TK ABA Se-Jateng" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Pendidikan</span>
+                        <h6 class="mb-0 fw-bold">Pentas Kreativitas Siswa TK ABA Se-Jateng</h6>
+                        <small class="text-white-50">Kudus, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-musypimwil.jpg" alt="Musyawarah Pimpinan Wilayah (Musypimwil)" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Musyawarah</span>
+                        <h6 class="mb-0 fw-bold">Musyawarah Pimpinan Wilayah (Musypimwil)</h6>
+                        <small class="text-white-50">Magelang, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-posyandu-cegah-stunting.jpg" alt="Penyuluhan Gizi & Posyandu Binaan" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Kesehatan</span>
+                        <h6 class="mb-0 fw-bold">Penyuluhan Gizi & Cegah Stunting di Posyandu</h6>
+                        <small class="text-white-50">Pekalongan, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galeri 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="galeri-card position-relative overflow-hidden">
+                    <img src="assets/uploads/galeri/galeri-baksos-lansia.jpg" alt="Distribusi Bantuan Tanggap Bencana LLHPB" class="w-100 h-100" style="object-fit: cover; transition: transform 0.4s ease;">
+                    <div class="galeri-overlay">
+                        <span class="badge bg-warning text-dark mb-1 align-self-start small">Kemanusiaan</span>
+                        <h6 class="mb-0 fw-bold">Distribusi Bantuan Tanggap Bencana LLHPB</h6>
+                        <small class="text-white-50">Demak, Jawa Tengah</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="galeri.php" class="btn btn-outline-gold px-4 py-2">
+                Lihat Seluruh Koleksi Galeri <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 8. CALL TO ACTION (PUSTAKA) ================= -->
+<section class="py-5">
+    <div class="container">
+        <div class="cta-banner">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark px-3 py-2 fw-bold mb-2">Arsip Digital Terbuka</span>
+                    <h2 class="text-white mb-2">Akses Koleksi Buku, Riset & Dokumen Resmi</h2>
+                    <p class="text-white-50 mb-0">
+                        Unduh naskah panduan kader, pedoman hidup Islami, serta riset perkembangan gerakan dakwah Aisyiyah Jawa Tengah dalam format dokumen digital.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="pustaka.php" class="btn btn-gold btn-lg px-4">
+                        Buka Pustaka Digital <i class="bi bi-box-arrow-up-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php
+include 'includes/footer.php';
+?>
